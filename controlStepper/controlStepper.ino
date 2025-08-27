@@ -6,9 +6,10 @@
 // ** High  High  Low       1/8 step **
 //  High  High  High      1/16 step
 
-#define EN    12
-#define STEP1 32  // Chân xung
-#define DIR1  25  // Chân DIR1 dùng để xác định chiều quay của step
+#define EN1   26
+#define EN2   12
+#define STEP1 25  // Chân xung
+#define DIR1  23  // Chân DIR1 dùng để xác định chiều quay của step
 #define STEP2 14  // Chân xung
 #define DIR2  27  // Chân DIR1 dùng để xác định chiều quay của step
 
