@@ -3,8 +3,8 @@
 
 void controlStep(int round, int delay)
 {
-  int pluse = (round * 360) / 0.225;
-  for (int i = 0; i < pluse; i++)
+  long pluse = (round * 360) / 0.225;
+  for (long i = 0; i < pluse; i++)
   {
     digitalWrite(STEP1, 1); // Cuộn dây trên của step
     digitalWrite(STEP2, 1); // Cuộn dây trên của step

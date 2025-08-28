@@ -39,18 +39,18 @@ void loop()
     inputParameter = Serial.readStringUntil('\n');
     commandIndex = inputParameter.indexOf(',');
 
-    if (commandIndex > 0) {R = inputParameter.substring(0, commandIndex).toInt(); D = inputParameter.substring(commandIndex + 1).toInt();}
-    else {Serial.println("FAILED R,D");}
+    if (commandIndex > 0) {R = inputParameter.substring(0, commandIndex).toInt(); D = inputParameter.substring(commandIndex + 1).toInt(); Serial.println("Set Completed");}
+    else {Serial.println("No Data R,D");}
   }
 
   digitalWrite(DIR1, 0);
-  digitalWrite(DIR2, 0);
+  digitalWrite(DIR2, 1);
   controlStep(R, D);
 
   delay(1000);
 
   digitalWrite(DIR1, 1);
-  digitalWrite(DIR2, 1);
+  digitalWrite(DIR2, 0);
   controlStep(R, D);
 
   delay(1000);
