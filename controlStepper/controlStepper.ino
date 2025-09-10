@@ -43,12 +43,13 @@ void loop()
     else {Serial.println("No Data R,D");}
   }
 
-  digitalWrite(DIR1, 0);
+  //Theo chiều kim, lấy cổng nạp esp bên phải
+  digitalWrite(DIR1, 0); 
   digitalWrite(DIR2, 1);
   controlStep(R, D);
 
   delay(1000);
-
+  //Ngược chiều kim, lấy cổng nạp esp bên phải
   digitalWrite(DIR1, 1);
   digitalWrite(DIR2, 0);
   controlStep(R, D);
